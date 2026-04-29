@@ -1,0 +1,237 @@
+/* Traditional institutional styling matching original UHS website */
+:root {
+    --uhs-green: #1a5e32; /* Typical forest green used by UHS */
+    --uhs-maroon: #7B1113; /* UHS Maroon */
+    --text-main: #333333;
+    --bg-light: #f4f5f7;
+    --border-color: #dddddd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+    background-color: #ffffff;
+    padding: 15px 0;
+    border-bottom: 5px solid var(--uhs-green);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 90px;
+    margin-right: 20px;
+    border: none;
+}
+
+.site-title h1 {
+    font-size: 26px;
+    color: var(--uhs-green);
+    font-family: "Times New Roman", Times, serif;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.site-title h2 {
+    font-size: 16px;
+    color: var(--uhs-maroon);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Navigation */
+.main-nav {
+    background-color: var(--uhs-green);
+    border-bottom: 3px solid var(--uhs-maroon);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav li a {
+    display: block;
+    padding: 12px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-nav li a:hover {
+    background-color: var(--uhs-maroon);
+}
+
+/* Main Content */
+.main-content {
+    background-color: #ffffff;
+    padding: 20px;
+    min-height: 500px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.banner {
+    margin-bottom: 25px;
+    border: 4px solid #efefef;
+}
+
+.banner img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.section-title {
+    background-color: #f9f9f9;
+    color: var(--uhs-green);
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-left: 5px solid var(--uhs-maroon);
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-left: 5px solid var(--uhs-maroon);
+}
+
+/* Profile Table */
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.profile-table th, .profile-table td {
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+}
+
+.profile-table th {
+    background-color: #f0f0f0;
+    width: 200px;
+    text-align: left;
+    color: var(--text-main);
+    font-weight: bold;
+}
+
+/* Academic Grid */
+.academic-section {
+    margin-bottom: 30px;
+}
+
+.academic-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.academic-card {
+    flex: 1;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.academic-card h3 {
+    background-color: #f0f0f0;
+    padding: 12px;
+    font-size: 16px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-main);
+}
+
+.status {
+    padding: 25px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.status.passed {
+    color: var(--uhs-green);
+}
+
+/* Transfer Section */
+.transfer-section {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px dashed #cccccc;
+}
+
+.transfer-heading {
+    color: #ff0000;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.document-container {
+    text-align: center;
+    border: 1px solid #cccccc;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.document-container img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #999999;
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--uhs-green);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    border-top: 4px solid var(--uhs-maroon);
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .academic-grid {
+        flex-direction: column;
+    }
+}
